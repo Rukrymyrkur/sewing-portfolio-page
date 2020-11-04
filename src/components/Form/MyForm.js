@@ -14,7 +14,6 @@ const MyForm = () => {
             <FormContainer>
                 <StyledForm
                     name="contact"
-                    action="/contact"
                     method="post"
                 >
                     <Input type="hidden" name="form-name" value="contact" />
