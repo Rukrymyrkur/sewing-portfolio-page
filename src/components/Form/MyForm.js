@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   StyledForm,
   Input,
@@ -9,16 +9,23 @@ import {
 import { Container } from "../../globalStyles";
 
 const MyForm = () => {
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=true")) {
+      setSuccess(true);
+    }
+  }, []);
+
   return (
     <FormContainer>
       <StyledForm
         name="contact"
-        action="/contact"
-        method="post"
+        method="POST"
+        action="contact/?success=true"
         data-netlify="true"
-        onSubmit="submit"
       >
-        <Input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <h2>Write me!</h2>
         <Input required type="email" name="email" placeholder="your email" />
         <Input required type="name" name="name" placeholder="your name" />
@@ -29,6 +36,7 @@ const MyForm = () => {
           placeholder="your message"
         />
         <Button type="submit">Send message</Button>
+        {success && <p style={{ color: "green" }}>Thanks for your message!</p>}
       </StyledForm>
     </FormContainer>
   );
