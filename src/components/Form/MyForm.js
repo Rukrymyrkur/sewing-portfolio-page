@@ -27,7 +27,7 @@ const MyForm = () => {
       >
         <input type="hidden" name="form-name" value="contact" />
         <h2>Write me!</h2>
-        <Input required type="email" name="email" placeholder="your email" />
+        <Input type="email" name="email" placeholder="your email" />
         <Input required type="name" name="name" placeholder="your name" />
         <MessageArea
           required
@@ -36,7 +36,7 @@ const MyForm = () => {
           placeholder="your message"
         />
         <Button type="submit">Send message</Button>
-        {success && <p style={{ color: "green" }}>Thanks for your message!</p>}
+        {success && <p>Thank You!</p>}
       </StyledForm>
     </FormContainer>
   );
