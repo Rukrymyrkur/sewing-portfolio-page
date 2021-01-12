@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sewing projects page
 
 A multiple-page website for sewing projects.
@@ -41,7 +40,4 @@ npm start
 
 ## Live
 
-[Live version](https://neringa-temp.netlify.app/)
-=======
-
->>>>>>> 93c46f6c2d08a090292a08c6af419d5f569120f7
+# [Live version](https://neringa-temp.netlify.app/)
