@@ -11,7 +11,12 @@ import { Container } from "../../globalStyles";
 const MyForm = () => {
   return (
     <FormContainer>
-      <StyledForm name="contact" method="post">
+      <StyledForm
+        name="contact"
+        action="/contact"
+        method="post"
+        data-netlify="true"
+      >
         <Input type="hidden" name="form-name" value="contact" />
         <h2>Write me!</h2>
         <Input required type="email" name="email" placeholder="your email" />
