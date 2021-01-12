@@ -16,6 +16,7 @@ const MyForm = () => {
         action="/contact"
         method="post"
         data-netlify="true"
+        onSubmit="submit"
       >
         <Input type="hidden" name="form-name" value="contact" />
         <h2>Write me!</h2>
