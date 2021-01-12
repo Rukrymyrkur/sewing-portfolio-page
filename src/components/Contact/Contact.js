@@ -38,7 +38,7 @@ const Contact = () => {
             <StyledForm
               name="contact"
               method="POST"
-              action="contact/?success=true"
+              // action="/contact/?success=true"
               data-netlify="true"
             >
               <input type="hidden" name="form-name" value="contact" />
