@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "../../globalStyles";
-import MyForm from "../Form/MyForm";
 import {
   EmailContainer,
   SocialContainer,
   SocialLinks,
   SocialLink,
   ContactContainer,
+  StyledForm,
+  Input,
+  MessageArea,
+  FormContainer,
+  Button,
 } from "./Contact.elements";
 import {
   FaCodepen,
@@ -18,11 +22,39 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=true")) {
+      setSuccess(true);
+    }
+  }, []);
+
   return (
     <Container>
       <ContactContainer>
         <EmailContainer id="email">
-          <MyForm />
+          <FormContainer>
+            <StyledForm
+              name="contact"
+              method="POST"
+              action="contact/?success=true"
+              data-netlify="true"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <h2>Write me!</h2>
+              <Input type="email" name="email" placeholder="your email" />
+              <Input required type="name" name="name" placeholder="your name" />
+              <MessageArea
+                required
+                id="message"
+                name="message"
+                placeholder="your message"
+              />
+              <Button type="submit">Send message</Button>
+              {success && <p>Thank You!</p>}
+            </StyledForm>
+          </FormContainer>
         </EmailContainer>
         <SocialContainer id="other">
           <SocialLinks>
