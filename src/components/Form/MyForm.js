@@ -19,7 +19,19 @@ const MyForm = () => {
 
   return (
     <FormContainer>
-      <StyledForm
+      <form
+        name="contact"
+        method="POST"
+        action="contact/?success=true"
+        data-netlify="true"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="email" name="email" placeholder="your email" />
+        <input type="name" name="name" placeholder="your name" />
+        <textarea id="message" name="message" placeholder="your message" />
+        <button type="submit">Send message</button>
+      </form>
+      {/* <StyledForm
         name="contact"
         method="POST"
         action="contact/?success=true"
@@ -37,7 +49,7 @@ const MyForm = () => {
         />
         <Button type="submit">Send message</Button>
         {success && <p>Thank You!</p>}
-      </StyledForm>
+      </StyledForm> */}
     </FormContainer>
   );
 };
