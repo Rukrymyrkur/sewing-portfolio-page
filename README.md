@@ -40,4 +40,4 @@ npm start
 
 ## Live
 
-[Live version](https://neringa-temp.netlify.app/)
+[Live version](https://neringasews.netlify.app/)
