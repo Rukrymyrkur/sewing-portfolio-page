@@ -102,6 +102,7 @@ export const SocialLink = styled.a`
 `;
 
 export const StyledForm = styled.form`
+  z-index: 999;
   min-width: 60vw;
   background-color: #fff;
   border-radius: 10px;
