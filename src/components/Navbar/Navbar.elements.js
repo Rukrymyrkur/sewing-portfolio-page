@@ -11,18 +11,16 @@ export const Nav = styled.nav`
   font-size: 1rem;
   position: sticky;
   top: 0px;
-  z-index: 999;
+  z-index: 99;
 `;
 
-export const NavbarContainer = styled(Container)`
+export const NavbarContainer = styled.div`
   display: flex;
   height: 50px;
   width: 100%;
   justify-content: space-between;
   margin-left: 50px;
   margin-right: 50px;
-
-  ${Container}
 `;
 
 export const NavLogo = styled(Link)`
